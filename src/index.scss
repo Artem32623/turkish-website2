@@ -1,0 +1,427 @@
+@import "./variables.scss";
+@import "./_reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@300;400;500;700&family=Open+Sans:wght@300;400&display=swap");
+.container {
+  margin: 0 auto;
+  max-width: 1196px;
+}
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+header {
+  @include flex(flex, row, right, center);
+  padding: 10px 0px;
+  .hamburger {
+    @include flex(none, row, left, center);
+  }
+  nav {
+    ul {
+      @include flex(flex, row, none, center);
+      flex-wrap: wrap;
+      list-style: none;
+      font-weight: 700;
+      li {
+        padding: 0px 20px;
+        color: black;
+      }
+      .button {
+        @extend %button;
+      }
+    }
+  }
+}
+.header {
+  background: url("../img/header-image.png") center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 750px;
+}
+.header-text {
+  @include flex(flex, column, center, left);
+  height: 500px;
+  margin: $margin-for-text;
+  h1 {
+    @extend %text-h1;
+    width: 60%;
+  }
+  p {
+    @extend %text-p;
+    width: 60%;
+  }
+  .input {
+    @include flex(flex, row, space-between, center);
+    background: white;
+    border-radius: 8px;
+    width: 40%;
+    height: 73px;
+    margin-top: 30px;
+    padding: 10px;
+
+    input {
+      overflow: hidden;
+      padding: 0px 20px;
+      width: auto;
+      max-width: 300px;
+    }
+    .button {
+      @extend %button;
+      width: 130px;
+      height: 60px;
+    }
+  }
+}
+.all-blocks {
+  padding: 120px 0px;
+  h2 {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 800;
+  }
+  p {
+    @extend %text-p;
+    font-size: 24px;
+    margin-top: 30px;
+    text-align: center;
+    width: auto;
+  }
+  .blocks {
+    @include flex(flex, row, center, center);
+    flex-wrap: wrap;
+    margin-top: 50px;
+    .first {
+      @include flex(flex, row, center, center);
+      flex-wrap: wrap;
+    }
+    .second {
+      @include flex(flex, row, center, center);
+      flex-wrap: wrap;
+    }
+    .block {
+      @include flex(flex, column, center, center);
+      width: 330px;
+      margin: 20px 30px;
+      p {
+        @extend %block-p;
+      }
+      h3 {
+        @extend %block-h3;
+      }
+    }
+  }
+}
+
+.about-us {
+  background-color: $main-color;
+  color: $text-color;
+  text-align: center;
+  padding: 70px 0px;
+  h3 {
+    @extend %big-h3;
+    padding: 10px 0px;
+  }
+  .containers {
+    @include flex(flex, row, center, center);
+    flex-wrap: wrap;
+    .box {
+      @include flex(flex, column, center, center);
+      margin: 20px;
+      text-align: start;
+      max-width: 150px;
+
+      margin: 50px 50px 0px 50px;
+    }
+    .circle {
+      margin: 50px 10px 0px 10px;
+    }
+  }
+}
+.info {
+  padding: 160px 0px;
+  .line {
+    @include flex(flex, row, center, center);
+    flex-wrap: wrap;
+    .text {
+      width: 45%;
+      margin-bottom: 90px;
+      .button {
+        @extend %button;
+        width: 160px;
+      }
+      h1 {
+        @extend %text-h1;
+      }
+      p {
+        margin: $margin-for-text;
+        font-weight: 400;
+        font-size: 16px;
+        color: #808080;
+      }
+    }
+    .image {
+      width: 45%;
+    }
+  }
+  .line1 {
+    margin-bottom: 100px;
+    .text {
+      margin-right: 10%;
+    }
+  }
+  .line2 {
+    .image {
+      margin-right: 10%;
+    }
+  }
+}
+.companies {
+  padding: 60px 0px;
+  background: #f4f5f7;
+  text-align: center;
+  margin: 20px 0px;
+  h1 {
+    @extend %text-h1;
+    font-size: 2.5vmax;
+  }
+  p {
+    @extend %block-p;
+  }
+  .blocks {
+    @include flex(flex, row, center, center);
+    margin: 40px 0px 0px 0px;
+    .extra-block {
+      @include flex(none, column, center, center);
+    }
+    .block {
+      @include flex(flex, column, center, center);
+      .cont {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px 20px;
+      }
+    }
+  }
+}
+
+.people {
+  @include flex(flex, column, center, center);
+  height: 635px;
+  h1 {
+    @extend %text-h1;
+    font-size: 2.5vmax;
+  }
+  p {
+    @extend %block-p;
+  }
+  .button {
+    @extend %button;
+    width: 204px;
+    padding: 20px 0px;
+    margin-top: 20px;
+  }
+}
+footer {
+  background-color: $main-color;
+  padding: 60px 0px;
+  .columns {
+    @include flex(flex, row, none, none);
+    .column {
+      margin: 20px 5%;
+      h3 {
+        font-weight: 700;
+        font-size: 16px;
+        margin: 25px 0px;
+        color: white;
+      }
+      p {
+        @extend %p-for-footer;
+        margin: 25px 0px;
+      }
+    }
+  }
+  .navbar {
+    @include flex(flex, row, space-between, center);
+    padding: 5px;
+    margin-top: 20px;
+    p {
+      @extend %p-for-footer;
+    }
+    .networks {
+      img {
+        margin: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .info {
+    padding: 160px 0px;
+    .line {
+      @include flex(flex, row, center, center);
+      flex-wrap: wrap;
+      .text {
+        width: 100%;
+        text-align: center;
+        .button {
+          @extend %button;
+          width: 160px;
+        }
+        h1 {
+          @extend %text-h1;
+        }
+        p {
+          margin: $margin-for-text;
+          font-weight: 400;
+          font-size: 16px;
+          color: #808080;
+        }
+      }
+      .image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+      }
+    }
+    .line1 {
+      margin-bottom: 100px;
+      .text {
+        margin-right: 0px;
+        order: 2;
+      }
+    }
+    .line2 {
+      .image {
+        margin-right: 0px;
+      }
+    }
+  }
+  footer {
+    .columns {
+      flex-wrap: wrap;
+      .column {
+        margin: 20px 50px;
+      }
+    }
+  }
+  .header-text {
+    text-align: center;
+    h1 {
+      width: 100%;
+    }
+    p {
+      width: 100%;
+    }
+  }
+  .all-input {
+    @include flex(flex, row, center, center);
+    .button {
+      width: auto;
+    }
+    .input {
+      width: 90%;
+    }
+  }
+  header {
+    @include flex(flex, row, left, center);
+    padding: 10px 0px;
+    .hamburger {
+      margin: 5px;
+      @include flex(flex, row, left, center);
+    }
+    nav {
+      ul {
+        @include flex(none, row, none, center);
+        flex-wrap: wrap;
+        list-style: none;
+        font-weight: 700;
+      }
+    }
+  }
+  .all-blocks .blocks .block {
+    width: auto;
+  }
+  .companies {
+    padding: 60px 0px;
+    background: #f4f5f7;
+    text-align: center;
+    margin: 20px 0px;
+    h1 {
+      @extend %text-h1;
+      font-size: 2.5vmax;
+    }
+    p {
+      @extend %block-p;
+    }
+    .blocks {
+      margin: 40px 0px 0px 0px;
+      .cont {
+        @include flex(flex, row, center, center);
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px 20px;
+        p {
+          color: $main-color;
+          padding: 10px 3px;
+        }
+      }
+      @include flex(flex, row, center, center);
+      .extra-block {
+        @include flex(flex, column, center, center);
+      }
+      flex-wrap: wrap;
+      .block {
+        @include flex(none, column, center, center);
+        flex-wrap: wrap;
+      }
+    }
+  }
+  /* .line1,
+  .line2 {
+    @include flex(flex, row, center, center);
+    flex-wrap: wrap;
+    .text {
+      width: 100%;
+      h1 {
+        @extend %text-h1;
+      }
+      p {
+        margin: $margin-for-text;
+        font-weight: 400;
+        font-size: 16px;
+        color: #808080;
+      }
+    }
+    .image {
+      width: 100%s;
+    }
+  } */
+  .circle img {
+    transform: rotate(90deg);
+  }
+  .about-us {
+    background-color: $main-color;
+    color: $text-color;
+    text-align: center;
+    padding: 70px 0px;
+    h3 {
+      @extend %big-h3;
+      padding: 10px 0px;
+    }
+    .containers {
+      @include flex(flex, column, center, center);
+      flex-wrap: wrap;
+      .box {
+        @include flex(flex, column, center, center);
+        margin: 20px;
+        text-align: start;
+        max-width: 150px;
+        text-align: center;
+        margin: 50px 50px 0px 50px;
+      }
+    }
+  }
+}

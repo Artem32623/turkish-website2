@@ -1,0 +1,48 @@
+$main-color: #f84646;
+$text-color: white;
+$margin-for-text: 10px 5px;
+$box-shadow-for-button: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$width-for-button: 91px;
+@mixin flex($display, $direction, $justify, $align) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+%text-h1 {
+  font-weight: 800;
+  font-size: 3vmax;
+}
+%block-p {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  margin: $margin-for-text;
+}
+%p-for-footer {
+  color: #e6e6e6;
+  font-size: 16px;
+  font-weight: 400;
+}
+%big-h3 {
+  font-size: 48px;
+  font-weight: 700;
+}
+%block-h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: $margin-for-text;
+}
+%button {
+  background-color: $main-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: $box-shadow-for-button;
+  width: $width-for-button;
+}
+%text-p {
+  font-weight: 400;
+  font-size: 20px;
+  margin: $margin-for-text;
+}
