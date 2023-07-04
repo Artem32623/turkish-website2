@@ -4,7 +4,7 @@ Website for turkish company using HMTL and SCSS
 
 ![Preview](https://user-images.githubusercontent.com/97308198/229359307-d5741aa3-459e-42d0-813a-79dce5e5cd71.png)
 
-https://artem32623.github.io/turkish-website2/ (demo)
+https://luffymng.github.io/turkish-website2/ (demo)
 
 
 A website, that I made using HTML and SCSS(CSS). 
